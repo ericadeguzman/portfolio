@@ -29,19 +29,22 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     height: "2em",
   },
-  logoContainer:  {
+  logoContainer: {
     padding: 0,
-    "&:hover":  {
-      backgroundColor:  'transparent',
-    }
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
   },
   tabContainer: {
     marginLeft: "auto",
   },
-  tab: {
-    ...theme.typography.tab,
-    minWidth: 10,
-    marginLeft: "5px",
+  tabRoot: {
+    fontWeight: "normal",
+    color: "#525268",
+  },
+  selected: {
+    fontWeight: "bold",
+    color: "#525268",
   },
   button: {
     ...theme.typography.estimate,
@@ -76,13 +79,14 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position="fixed" color="#fff">
           <Toolbar>
-            <Button  
-            disableRipple  
-            className={classes.logoContainer} 
-            component={Link} 
-            to="/"
-             onClick={() => setValue(0) }>
-            <img alt="edg logo" className={classes.logo} src={logo} />
+            <Button
+              disableRipple
+              className={classes.logoContainer}
+              component={Link}
+              to="/"
+              onClick={() => setValue(0)}
+            >
+              <img alt="edg logo" className={classes.logo} src={logo} />
             </Button>
             <Tabs
               value={value}
@@ -92,28 +96,40 @@ export default function Header(props) {
             >
               <Tab
                 disableRipple
-                className={classes.tab}
+                classes={{
+                  root: classes.tabRoot,
+                  selected: classes.selected,
+                }}
                 component={Link}
                 to="/"
                 label="About"
               />
               <Tab
                 disableRipple
-                className={classes.tab}
+                classes={{
+                  root: classes.tabRoot,
+                  selected: classes.selected,
+                }}
                 component={Link}
                 to="/projects"
                 label="Projects"
               />
               <Tab
                 disableRipple
-                className={classes.tab}
+                classes={{
+                  root: classes.tabRoot,
+                  selected: classes.selected,
+                }}
                 component={Link}
                 to="/photography"
                 label="Photography"
               />
               <Tab
                 disableRipple
-                className={classes.tab}
+                classes={{
+                  root: classes.tabRoot,
+                  selected: classes.selected,
+                }}
                 component={Link}
                 to="/contact"
                 label="Contact"

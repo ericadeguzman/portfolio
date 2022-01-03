@@ -18,15 +18,15 @@ export default createMuiTheme({
     },
   },
   typography: {
-    tab: {
-      fontFamily: "Raleway",
-      fontWeight: 700,
-      color:  `${edgPurple}`,
-      "&:hover":  {
-        fontWeight: 700,
-        color: '#525268',
-      },
-    },
+    // tab: {
+    //   fontFamily: "Raleway",
+    //   fontWeight: 700,
+    //   color:  `${edgPurple}`,
+    //   "&:hover":  {
+    //     fontWeight: 700,
+    //     color: '#525268',
+    //   },
+    // },
     estimate: {
       marginRight: '15px',
       fontFamily: 'Raleway',
