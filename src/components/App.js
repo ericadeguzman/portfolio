@@ -1,32 +1,25 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import { ThemeProvider } from "@material-ui/styles";
+import { Typography } from "@material-ui/core";
+import Box from "@material-ui/core/Box";
+
 import theme from "../components/ui/Theme";
-
-
+import Header from "../components/ui/Header";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <AppBar position="fixed" color="primary">
-      <Toolbar>Edg Dev</Toolbar>
-    </AppBar>
-    <div className="class">
-{[...new Array(120)]
-  .map(
-    () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-  )
-  .join('\n')}
-</div>
-</ThemeProvider>
-
-
-
-  )
+      <Header />
+      <Box my={1} mx={1}>
+        <Typography>Hello!,</Typography>
+        <Typography style={{ marginTop: 10 }}>
+          Welcome to my github page. It's still in development so come back
+          later?
+        </Typography>
+        <Typography style={{ marginTop: 10 }}>Okay Thanks. Bye!!!!</Typography>
+      </Box>
+    </ThemeProvider>
+  );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 
-const edgPurple = "#000"
+const edgPurple = "#525268"
 const edgGrey = "#999"
 
 export default createMuiTheme({
@@ -17,4 +17,11 @@ export default createMuiTheme({
       main: `${edgGrey}`,
     },
   },
+  typography: {
+    h3: {
+      fontWeight: 600,
+      fontSize: 18,
+      color: `${edgPurple}`,
+    }
+  }
 });
