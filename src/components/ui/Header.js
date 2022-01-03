@@ -41,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
   tabRoot: {
     fontWeight: "normal",
     color: "#525268",
+    minWidth: 10,
+    marginLeft: "5px",
   },
   selected: {
     fontWeight: "bold",
