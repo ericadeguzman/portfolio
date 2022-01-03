@@ -18,10 +18,20 @@ export default createMuiTheme({
     },
   },
   typography: {
-    h3: {
-      fontWeight: 600,
-      fontSize: 18,
-      color: `${edgPurple}`,
-    }
+    tab: {
+      fontFamily: "Raleway",
+      fontWeight: 700,
+      color:  `${edgPurple}`,
+      "&:hover":  {
+        fontWeight: 700,
+        color: '#525268',
+      },
+    },
+    estimate: {
+      marginRight: '15px',
+      fontFamily: 'Raleway',
+      fontSize: '10px',
+      color: 'white',
+    },
   }
 });

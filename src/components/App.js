@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/styles";
-import { Typography } from "@material-ui/core";
-import Box from "@material-ui/core/Box";
+import { BrowserRouter, Route, Routes, } from "react-router-dom";
 
 import theme from "../components/ui/Theme";
 import Header from "../components/ui/Header";
@@ -9,15 +8,15 @@ import Header from "../components/ui/Header";
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <BrowserRouter>
       <Header />
-      <Box my={1} mx={1}>
-        <Typography>Hello!,</Typography>
-        <Typography style={{ marginTop: 10 }}>
-          Welcome to my github page. It's still in development so come back
-          later?
-        </Typography>
-        <Typography style={{ marginTop: 10 }}>Okay Thanks. Bye!!!!</Typography>
-      </Box>
+      <Routes>
+        <Route exact path="/" component={() => <div>About</div>} />
+        <Route exact path="/Projects" component={() => <div>Projects</div>} />
+        <Route exact path="/Photography" component={() => <div>Photography</div>} />
+        <Route exact path="/Contact" component={() => <div>Contact</div>} />
+      </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
