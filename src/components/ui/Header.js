@@ -104,6 +104,7 @@ export default function Header(props) {
   };
 
   const menuOptions = [
+    { name: "Social", link: "/Social" },
     { name: "Github", link: "/github" },
     { name: "Dribble", link: "/dribble" },
     { name: "Vsco", link: "/vsco" },
