@@ -19,16 +19,16 @@ export default createMuiTheme({
   },
   typography: {
     tab: {
+      fontSize: '13px',
       fontFamily: "Raleway",
-      fontWeight: 700,
-      color:  `${edgPurple}`,
+      fontWeight: "normal",
     },
     resume: {
-      marginRight: '15px',
       fontFamily: 'Raleway',
-      fontSize: '12px',
+      fontSize: '13px',
       color: 'white',
       textTransform: 'none',
+      marginTop: '20px'
     },
   }
 });

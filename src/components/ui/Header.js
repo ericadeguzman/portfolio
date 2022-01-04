@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
 import logo from "../../assets/logo.svg";
 
@@ -39,14 +41,15 @@ const useStyles = makeStyles((theme) => ({
   },
   tabContainer: {
     marginLeft: "auto",
+    marginTop: "20px",
   },
   tabRoot: {
-    fontWeight: "normal",
-    color: "#525268",
+    ...theme.typography.tab,
     minWidth: 10,
     marginLeft: "5px",
+    color: "#525268",
     "&:hover": {
-      fontWeight: 700,
+      fontWeight: "bold",
       color: "#525268",
     },
   },
@@ -57,27 +60,30 @@ const useStyles = makeStyles((theme) => ({
   button: {
     ...theme.typography.resume,
     borderRadius: "50px",
-    marginLeft: "45px",
+    marginLeft: "15px",
     marginRight: "15px",
   },
   menu: {
     backgroundColor: theme.palette.common.purple,
     color: "white",
-    padding: "0",
+    borderRadius: "0px",
   },
   menuItem: {
-    fontFamily: "Raleway",
-    fontSize: 14,
+    ...theme.typography.tab,
     opacity: 0.7,
+    color: "white",
     "&:hover": {
       opacity: 1,
       background: "transparent",
+      fontWeight: "bold",
     },
   },
 }));
 
 export default function Header(props) {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("xs"));
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
@@ -117,13 +123,155 @@ export default function Header(props) {
       setValue(1);
     } else if (window.location.pathname === "/photography" && value !== 1) {
       setValue(2);
-    } else if (window.location.pathname === "/photography" && value !== 1) {
+    } else if (window.location.pathname === "/social" && value !== 1) {
       setValue(3);
     } else if (window.location.pathname === "/contact" && value !== 1) {
       setValue(4);
     }
+
+    switch (window.location.pathname) {
+      case "/":
+        if (value !== 0) {
+          setValue(0);
+        }
+        break;
+      case "/social":
+        if (value !== 3) {
+          setValue(3);
+        }
+        break;
+      case "/github":
+        if (value !== 3) {
+          setValue(3);
+          setSelectedIndex(0);
+        }
+        break;
+      case "/dribble":
+        if (value !== 3) {
+          setValue(3);
+          setSelectedIndex(1);
+        }
+        break;
+      case "/vsco":
+        if (value !== 3) {
+          setValue(3);
+          setSelectedIndex(2);
+        }
+        break;
+      case "/projects":
+        if (value !== 1) {
+          setValue(1);
+        }
+        break;
+      case "/photography":
+        if (value !== 2) {
+          setValue(2);
+        }
+        break;
+      case "/contact":
+        if (value !== 4) {
+          setValue(4);
+        }
+        break;
+      default:
+        break;
+    }
   }, [value]);
 
+  const tabs = (
+    <React.Fragment>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        className={classes.tabContainer}
+        indicatorColor="#fff"
+      >
+        <Tab
+          disableRipple
+          classes={{
+            root: classes.tabRoot,
+            selected: classes.selected,
+          }}
+          component={Link}
+          to="/"
+          label="About"
+        />
+        <Tab
+          disableRipple
+          classes={{
+            root: classes.tabRoot,
+            selected: classes.selected,
+          }}
+          component={Link}
+          to="/projects"
+          label="Projects"
+        />
+        <Tab
+          disableRipple
+          classes={{
+            root: classes.tabRoot,
+            selected: classes.selected,
+          }}
+          component={Link}
+          to="/photography"
+          label="Photography"
+        />
+        <Tab
+          aria-owns={anchorEl ? "simple-menu" : undefined}
+          aria-haspopup={anchorEl ? "true" : undefined}
+          disableRipple
+          classes={{
+            root: classes.tabRoot,
+            selected: classes.selected,
+          }}
+          component={Link}
+          onMouseOver={(event) => handleClick(event)}
+          to="/social"
+          label="Social"
+        />
+        <Tab
+          disableRipple
+          classes={{
+            root: classes.tabRoot,
+            selected: classes.selected,
+          }}
+          component={Link}
+          to="/contact"
+          label="Contact"
+        />
+      </Tabs>
+      <Button className={classes.button} variant="contained" color="primary">
+        Resume
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        classes={{ paper: classes.menu }}
+        MenuListProps={{ onMouseLeave: handleClose }}
+        elevation={0}
+      >
+        {menuOptions.map((option, i) => (
+          <MenuItem
+            disableRipple
+            key={option}
+            component={Link}
+            to={option.link}
+            classes={{ root: classes.menuItem }}
+            onClick={(event) => {
+              handleMenuItemClick(event, i);
+              setValue(3);
+              handleClose();
+            }}
+            selected={i === selectedIndex && value === 1}
+          >
+            {option.name}
+          </MenuItem>
+        ))}
+      </Menu>
+    </React.Fragment>
+  )
   return (
     <React.Fragment>
       <ElevationScroll>
@@ -138,100 +286,7 @@ export default function Header(props) {
             >
               <img alt="edg logo" className={classes.logo} src={logo} />
             </Button>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              className={classes.tabContainer}
-              indicatorColor="#fff"
-            >
-              <Tab
-                disableRipple
-                classes={{
-                  root: classes.tabRoot,
-                  selected: classes.selected,
-                }}
-                component={Link}
-                to="/"
-                label="About"
-              />
-              <Tab
-                disableRipple
-                classes={{
-                  root: classes.tabRoot,
-                  selected: classes.selected,
-                }}
-                component={Link}
-                to="/projects"
-                label="Projects"
-              />
-              <Tab
-                disableRipple
-                classes={{
-                  root: classes.tabRoot,
-                  selected: classes.selected,
-                }}
-                component={Link}
-                to="/photography"
-                label="Photography"
-              />
-              <Tab
-                aria-owns={anchorEl ? "simple-menu" : undefined}
-                aria-haspopup={anchorEl ? "true" : undefined}
-                disableRipple
-                classes={{
-                  root: classes.tabRoot,
-                  selected: classes.selected,
-                }}
-                component={Link}
-                onMouseOver={(event) => handleClick(event)}
-                to="/social"
-                label="Social"
-              />
-              <Tab
-                disableRipple
-                classes={{
-                  root: classes.tabRoot,
-                  selected: classes.selected,
-                }}
-                component={Link}
-                to="/contact"
-                label="Contact"
-              />
-            </Tabs>
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="primary"
-            >
-              Resume
-            </Button>
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              classes={{ paper: classes.menu }}
-              MenuListProps={{ onMouseLeave: handleClose }}
-              elevation={0}
-            >
-              {menuOptions.map((option, i) => (
-                <MenuItem
-                  disableRipple
-                  key={option}
-                  component={Link}
-                  to={option.link}
-                  classes={{ root: classes.menuItem }}
-                  onClick={(event) => {
-                    handleMenuItemClick(event, i);
-                    setValue(3);
-                    handleClose();
-                  }}
-                  selected={i === selectedIndex && value === 1}
-                >
-                  {option.name}
-                </MenuItem>
-              ))}
-            </Menu>
+            {matches ? null : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
