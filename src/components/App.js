@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
       <Header />
       <Routes>
-        <Route exact path="/" component={() => <div>About</div>} />
+        <Route exact path="/portfolio/about" component={() => <div>About</div>} />
         <Route exact path="/potrfolio/projects" component={() => <div>Projects</div>} />
         <Route exact path="/potrfolio/photography" component={() => <div>Photography</div>} />
         <Route exact path="/potrfolio/social" component={() => <div>Social</div>} />

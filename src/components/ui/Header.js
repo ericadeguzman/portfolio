@@ -11,6 +11,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
+import Resume from "../../assets/resume.pdf"
 
 import logo from "../../assets/logo.svg";
 
@@ -111,9 +112,9 @@ export default function Header(props) {
 
   const menuOptions = [
     { name: "Social", link: "/portfolio/social" },
-    { name: "Github", link: "/portfolio/github" },
-    { name: "Dribble", link: "/portfolio/dribble" },
-    { name: "Vsco", link: "/portfolio/vsco" },
+    { name: "Github", link: "/portfolio/social/github" },
+    { name: "Dribble", link: "/portfolio/social/dribble" },
+    { name: "Vsco", link: "/portfolio/social/vsco" },
   ];
 
   useEffect(() => {
@@ -193,7 +194,7 @@ export default function Header(props) {
             selected: classes.selected,
           }}
           component={Link}
-          to="/portfolio/"
+          to="/portfolio/about"
           label="About"
         />
         <Tab
@@ -240,7 +241,7 @@ export default function Header(props) {
           label="Contact"
         />
       </Tabs>
-      <Button className={classes.button} variant="contained" color="primary">
+      <Button className={classes.button} download href={Resume} variant="contained" color="primary">
         Resume
       </Button>
       <Menu
@@ -281,7 +282,7 @@ export default function Header(props) {
               disableRipple
               className={classes.logoContainer}
               component={Link}
-              to="/"
+              to="/portfolio/"
               onClick={() => setValue(0)}
             >
               <img alt="edg logo" className={classes.logo} src={logo} />
