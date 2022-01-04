@@ -110,22 +110,22 @@ export default function Header(props) {
   };
 
   const menuOptions = [
-    { name: "Social", link: "/Social" },
-    { name: "Github", link: "/github" },
-    { name: "Dribble", link: "/dribble" },
-    { name: "Vsco", link: "/vsco" },
+    { name: "Social", link: "/portfolio/social" },
+    { name: "Github", link: "/portfolio/github" },
+    { name: "Dribble", link: "/portfolio/dribble" },
+    { name: "Vsco", link: "/portfolio/vsco" },
   ];
 
   useEffect(() => {
     if (window.location.pathname === "/" && value !== 0) {
       setValue(0);
-    } else if (window.location.pathname === "/projects" && value !== 1) {
+    } else if (window.location.pathname === "/portfolio/projects" && value !== 1) {
       setValue(1);
-    } else if (window.location.pathname === "/photography" && value !== 1) {
+    } else if (window.location.pathname === "/portfolio/photography" && value !== 1) {
       setValue(2);
-    } else if (window.location.pathname === "/social" && value !== 1) {
+    } else if (window.location.pathname === "/portfolio/social" && value !== 1) {
       setValue(3);
-    } else if (window.location.pathname === "/contact" && value !== 1) {
+    } else if (window.location.pathname === "/portfolio/contact" && value !== 1) {
       setValue(4);
     }
 
@@ -193,7 +193,7 @@ export default function Header(props) {
             selected: classes.selected,
           }}
           component={Link}
-          to="/"
+          to="/portfolio/"
           label="About"
         />
         <Tab
@@ -203,7 +203,7 @@ export default function Header(props) {
             selected: classes.selected,
           }}
           component={Link}
-          to="/projects"
+          to="/portfolio/projects"
           label="Projects"
         />
         <Tab
@@ -213,7 +213,7 @@ export default function Header(props) {
             selected: classes.selected,
           }}
           component={Link}
-          to="/photography"
+          to="/portfolio/photography"
           label="Photography"
         />
         <Tab
@@ -226,7 +226,7 @@ export default function Header(props) {
           }}
           component={Link}
           onMouseOver={(event) => handleClick(event)}
-          to="/social"
+          to="/portfolio/social"
           label="Social"
         />
         <Tab
@@ -236,7 +236,7 @@ export default function Header(props) {
             selected: classes.selected,
           }}
           component={Link}
-          to="/contact"
+          to="/portfolio/contact"
           label="Contact"
         />
       </Tabs>

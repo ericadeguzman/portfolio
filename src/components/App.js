@@ -12,10 +12,10 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" component={() => <div>About</div>} />
-        <Route exact path="/Projects" component={() => <div>Projects</div>} />
-        <Route exact path="/Photography" component={() => <div>Photography</div>} />
-        <Route exact path="/Social" component={() => <div>Social</div>} />
-        <Route exact path="/Contact" component={() => <div>Contact</div>} />
+        <Route exact path="/potrfolio/projects" component={() => <div>Projects</div>} />
+        <Route exact path="/potrfolio/photography" component={() => <div>Photography</div>} />
+        <Route exact path="/potrfolio/social" component={() => <div>Social</div>} />
+        <Route exact path="/potrfolio/contact" component={() => <div>Contact</div>} />
       </Routes>
       </BrowserRouter>
     </ThemeProvider>
