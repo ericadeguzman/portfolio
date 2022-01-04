@@ -18,20 +18,17 @@ export default createMuiTheme({
     },
   },
   typography: {
-    // tab: {
-    //   fontFamily: "Raleway",
-    //   fontWeight: 700,
-    //   color:  `${edgPurple}`,
-    //   "&:hover":  {
-    //     fontWeight: 700,
-    //     color: '#525268',
-    //   },
-    // },
-    estimate: {
+    tab: {
+      fontFamily: "Raleway",
+      fontWeight: 700,
+      color:  `${edgPurple}`,
+    },
+    resume: {
       marginRight: '15px',
       fontFamily: 'Raleway',
-      fontSize: '10px',
+      fontSize: '12px',
       color: 'white',
+      textTransform: 'none',
     },
   }
 });

@@ -7,6 +7,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 import logo from "../../assets/logo.svg";
 
@@ -43,26 +45,69 @@ const useStyles = makeStyles((theme) => ({
     color: "#525268",
     minWidth: 10,
     marginLeft: "5px",
+    "&:hover": {
+      fontWeight: 700,
+      color: "#525268",
+    },
   },
   selected: {
     fontWeight: "bold",
     color: "#525268",
   },
   button: {
-    ...theme.typography.estimate,
+    ...theme.typography.resume,
     borderRadius: "50px",
     marginLeft: "45px",
     marginRight: "15px",
+  },
+  menu: {
+    backgroundColor: theme.palette.common.purple,
+    color: "white",
+    padding: "0",
+  },
+  menuItem: {
+    fontFamily: "Raleway",
+    fontSize: 14,
+    opacity: 0.7,
+    "&:hover": {
+      opacity: 1,
+      background: "transparent",
+    },
   },
 }));
 
 export default function Header(props) {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleChange = (e, value) => {
     setValue(value);
   };
+
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+    setOpen(true);
+  };
+
+  const handleMenuItemClick = (e, i) => {
+    setAnchorEl(null);
+    setOpen(false);
+    setSelectedIndex(1);
+  };
+
+  const handleClose = (e) => {
+    setAnchorEl(null);
+    setOpen(false);
+  };
+
+  const menuOptions = [
+    { name: "Github", link: "/github" },
+    { name: "Dribble", link: "/dribble" },
+    { name: "Vsco", link: "/vsco" },
+  ];
 
   useEffect(() => {
     if (window.location.pathname === "/" && value !== 0) {
@@ -71,8 +116,10 @@ export default function Header(props) {
       setValue(1);
     } else if (window.location.pathname === "/photography" && value !== 1) {
       setValue(2);
-    } else if (window.location.pathname === "/contact" && value !== 1) {
+    } else if (window.location.pathname === "/photography" && value !== 1) {
       setValue(3);
+    } else if (window.location.pathname === "/contact" && value !== 1) {
+      setValue(4);
     }
   }, [value]);
 
@@ -127,6 +174,19 @@ export default function Header(props) {
                 label="Photography"
               />
               <Tab
+                aria-owns={anchorEl ? "simple-menu" : undefined}
+                aria-haspopup={anchorEl ? "true" : undefined}
+                disableRipple
+                classes={{
+                  root: classes.tabRoot,
+                  selected: classes.selected,
+                }}
+                component={Link}
+                onMouseOver={(event) => handleClick(event)}
+                to="/social"
+                label="Social"
+              />
+              <Tab
                 disableRipple
                 classes={{
                   root: classes.tabRoot,
@@ -144,6 +204,33 @@ export default function Header(props) {
             >
               Resume
             </Button>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              classes={{ paper: classes.menu }}
+              MenuListProps={{ onMouseLeave: handleClose }}
+              elevation={0}
+            >
+              {menuOptions.map((option, i) => (
+                <MenuItem
+                  disableRipple
+                  key={option}
+                  component={Link}
+                  to={option.link}
+                  classes={{ root: classes.menuItem }}
+                  onClick={(event) => {
+                    handleMenuItemClick(event, i);
+                    setValue(3);
+                    handleClose();
+                  }}
+                  selected={i === selectedIndex && value === 1}
+                >
+                  {option.name}
+                </MenuItem>
+              ))}
+            </Menu>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
