@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/styles";
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
-
 import theme from "../components/ui/Theme";
 import Header from "../components/ui/Header";
 
@@ -10,6 +9,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
       <Header />
+      
       <Routes>
         <Route exact path="/portfolio/about" component={() => <div>About</div>} />
         <Route exact path="/potrfolio/projects" component={() => <div>Projects</div>} />
