@@ -1,20 +1,20 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from '@material-ui/core/styles'
 
 
 const edgPurple = "#525268"
-const edgGrey = "#999"
+const edgLightPurple = "#DDDFEB"
 
-export default createMuiTheme({
+export default createTheme({
   palette: {
       common: {
           purple: `${edgPurple}`,
-          grey: `${edgGrey}`,
+          lightpurple: `${edgLightPurple}`,
       },
     primary: {
       main: `${edgPurple}`,
     },
     secondary: {
-      main: `${edgGrey}`,
+      main: `${edgLightPurple}`,
     },
   },
   typography: {
