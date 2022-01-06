@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles, withThemeCreator } from "@material-ui/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Button from "@material-ui/core/Button";
@@ -20,6 +20,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import logo from "../../assets/logo.svg";
 import Resume from "../../assets/resume.pdf";
+import { BlockRounded } from "@material-ui/icons";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -108,12 +109,16 @@ const useStyles = makeStyles((theme) => ({
   drawerItemResume: {
     ...theme.typography.tab,
     color: theme.palette.common.purple,
+    "&:hover": {
+      color: 'white',
+    },
   },
   drawerItemResumeBackground: {
     backgroundColor: theme.palette.common.lightpurple,
   },
   drawerItemSelected: {
-    opacity: 1
+    opacity: 1,
+    fontWeight: 'bold',
   },
 }));
 
@@ -420,7 +425,6 @@ export default function Header(props) {
               setOpenDrawer(false);
               setValue(5);
             }}
-            className={classes.drawerItemResumeBackground}
             divider
             button
             component={Link}
@@ -428,7 +432,7 @@ export default function Header(props) {
             selected={value === 5}
           >
             <ListItemText
-              className={classes.drawerItemResume}
+              className={value === 5 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}
               disableTypography
             >
               Resume
