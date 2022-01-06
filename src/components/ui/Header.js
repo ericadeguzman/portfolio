@@ -190,40 +190,40 @@ export default function Header(props) {
           setValue(0);
         }
         break;
-      case "/social":
+      case "/portfolio/projects":
+        if (value !== 1) {
+          setValue(1);
+        }
+        break;
+      case "/portfolio/photography":
+        if (value !== 2) {
+          setValue(2);
+        }
+        break;
+      case "/portfolio/social":
         if (value !== 3) {
           setValue(3);
         }
         break;
-      case "/github":
+      case "/portfolio/social/github":
         if (value !== 3) {
           setValue(3);
           setSelectedIndex(0);
         }
         break;
-      case "/dribble":
+      case "/portfolio/social/dribble":
         if (value !== 3) {
           setValue(3);
           setSelectedIndex(1);
         }
         break;
-      case "/vsco":
+      case "/portfolio/social/vsco":
         if (value !== 3) {
           setValue(3);
           setSelectedIndex(2);
         }
         break;
-      case "/projects":
-        if (value !== 1) {
-          setValue(1);
-        }
-        break;
-      case "/photography":
-        if (value !== 2) {
-          setValue(2);
-        }
-        break;
-      case "/contact":
+      case "/portfolio/contact":
         if (value !== 4) {
           setValue(4);
         }
