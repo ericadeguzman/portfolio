@@ -46,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: "2em",
-    marginTop: "20px",
   },
   logoContainer: {
     padding: 0,
@@ -56,12 +55,12 @@ const useStyles = makeStyles((theme) => ({
   },
   tabContainer: {
     marginLeft: "auto",
-    marginTop: "20px",
   },
   tabRoot: {
     ...theme.typography.tab,
     minWidth: 10,
     marginLeft: "5px",
+    marginTop: '20px',
     color: "#525268",
     "&:hover": {
       fontWeight: "bold",
@@ -96,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     width: "35px",
     height: "35px",
-    marginTop: "10px",
   },
   drawewrIconContainer: {
     "&:hover": {
