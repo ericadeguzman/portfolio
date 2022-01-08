@@ -14,20 +14,39 @@ const useStyles = makeStyles((theme) => ({
     ...theme.button,
     marginRight: 6,
     textTransform: "capitalize",
+    marginBottom: 6,
   },
   me: {
     maxWidth: 400,
     [theme.breakpoints.down("md")]: {
-      maxWidth: 400,
-    },
-    [theme.breakpoints.down("xs")]: {
-      maxWidth: 250,
-    },
+        maxWidth: 400,
+     },
+     [theme.breakpoints.down("sm")]: {
+        maxWidth: 300,
+     },
   },
   txt: {
-      ...theme.typography.text,
-
+    ...theme.typography.text,
   },
+  container: {
+    maxWidth: "1000px",
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    marginTop: 50,
+    marginBottom: 50,
+    [theme.breakpoints.down("md")]: {
+       marginTop: 0,
+       marginBottom: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+       marginTop: 0,
+       marginBottom: 50,
+    },
+  },
+  hello: {
+      paddingLeft: 10,
+      paddingRight: 10,
+  }
 }));
 
 export default function LandingPage() {
@@ -36,24 +55,24 @@ export default function LandingPage() {
 
   return (
     <React.Fragment>
-      <Box my={10}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid item xs={6} sm={5}>
-          <img className={classes.me} src={me} alt="this is me" />
-        </Grid>
-        <Grid item xs={6} sm={5}>
-          <Typography variant="h3" className={classes.txt}>
-            Hello I'm Erica,
-          </Typography>
-          <Typography className={classes.txt}>
-            a user experience designer from Orange County, CA.
-          </Typography>
-              <Box my={1}>
+      <Box className={classes.container}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item xs={12} sm={5}>
+            <img className={classes.me} src={me} alt="this is me" />
+          </Grid>
+          <Grid className={classes.hello} item xs={12} sm={5}>
+            <Typography variant="h3" className={classes.txt}>
+              Hello I'm Erica,
+            </Typography>
+            <Typography className={classes.txt}>
+              a user experience designer from Orange County, CA.
+            </Typography>
+            <Box my={1}>
               <Button
                 variant="contained"
                 color="primary"
@@ -68,9 +87,9 @@ export default function LandingPage() {
               >
                 Download Resume
               </Button>
-              </Box>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
       </Box>
     </React.Fragment>
   );
