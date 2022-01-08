@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     bottom: "0",
     left: "0",
     right: "0",
+    position: 'absolute',
+    // [theme.breakpoints.down('sm')]: {
+    //   position: 'absolute',
+    // },
   },
   link: {
     color: theme.palette.common.link,

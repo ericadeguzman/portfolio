@@ -104,9 +104,9 @@ export default function LandingPage() {
           </Grid>
           </Grid>
           </Grid>
-          <Box my={2}>
+          {/* <Box my={2}>
           <Grid item xs={12} sm={12}><img className={classes.books} src={books} alt="ux books" /></Grid>
-          </Box>
+          </Box> */}
         </Grid>
         
       </Box>
