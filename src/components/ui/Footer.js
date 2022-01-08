@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
+import { ExternalLink } from 'react-external-link';
+import Grid from "@material-ui/core/Grid";
+
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import { ExternalLink } from 'react-external-link';
 
-
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   footer: {

@@ -137,9 +137,7 @@ export default function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
-
   const [openDrawer, setOpenDrawer] = useState(false);
- 
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -171,7 +169,7 @@ export default function Header(props) {
   ];
   const routes= [
     {name: "About", link: "/portfolio/", activeIndex: 0 },
-    {name: "Projects", link: "/portfolio/projects/", activeIndex: 1 },
+    {name: "Projects", link: "/portfolio/projects", activeIndex: 1 },
     {name: "Photography", link: "/portfolio/photography", activeIndex: 2 },
     {name: "Social", link: "/portfolio/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
   ariaPopup: anchorEl ? "true" : undefined, 
