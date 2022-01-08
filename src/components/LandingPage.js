@@ -54,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LandingPage() {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <React.Fragment>
