@@ -3,14 +3,15 @@ import { makeStyles } from "@material-ui/styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { ExternalLink } from 'react-external-link';
+
 
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.purple,
-    width: "100%",
-    zIndex: 1302,
+    zIndex: 1300,
     position: "relative",
     padding: "2rem",
     textAlign: "center",
@@ -18,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Raleway",
     fontSize: "14px",
   },
+  link: {
+    color: theme.palette.common.link,
+  }
 }));
 
 export default function Footer() {
@@ -44,13 +48,19 @@ export default function Footer() {
             container
           >
             <Grid item xs={1}>
-              <LinkedInIcon />{" "}
+            <ExternalLink href="https://www.linkedin.com/in/ericadg/" >
+              <LinkedInIcon className={classes.link} />
+              </ExternalLink>
             </Grid>
             <Grid item xs={1}>
-              <InstagramIcon />
+            <ExternalLink href="https://www.instagram.com/edgphoto/" >
+              <InstagramIcon className={classes.link}/>
+              </ExternalLink>
             </Grid>
             <Grid item xs={1}>
-              <GitHubIcon />
+            <ExternalLink href="https://github.com/ericadeguzman/portfolio" >
+              <GitHubIcon className={classes.link}/>
+              </ExternalLink>
             </Grid>
           </Grid>
         </Grid>

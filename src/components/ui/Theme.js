@@ -9,6 +9,7 @@ export default createTheme({
       common: {
           purple: `${edgPurple}`,
           lightpurple: `${edgLightPurple}`,
+          link: '#fff',
       },
     primary: {
       main: `${edgPurple}`,
