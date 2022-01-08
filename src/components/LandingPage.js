@@ -8,6 +8,7 @@ import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
 import me from "../assets/img/me.jpg";
+import Resume from "../assets/resume.pdf";  
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -19,37 +20,37 @@ const useStyles = makeStyles((theme) => ({
   me: {
     maxWidth: 400,
     [theme.breakpoints.down("md")]: {
-        maxWidth: 400,
-     },
-     [theme.breakpoints.down("sm")]: {
-        maxWidth: 300,
-     },
+      maxWidth: 400,
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 300,
+    },
   },
   txt: {
     ...theme.typography.text,
   },
   container: {
     maxWidth: "1000px",
-    marginRight: 'auto',
-    marginLeft: 'auto',
+    marginRight: "auto",
+    marginLeft: "auto",
     marginTop: 50,
     marginBottom: 50,
     [theme.breakpoints.down("md")]: {
-       marginTop: 50,
-       marginBottom: 50,
+      marginTop: 50,
+      marginBottom: 50,
     },
     [theme.breakpoints.down("sm")]: {
-       marginTop: 0,
-       marginBottom: 50,
+      marginTop: 0,
+      marginBottom: 50,
     },
   },
   hello: {
-      paddingLeft: 10,
-      paddingRight: 10,
-      [theme.breakpoints.down("sm")]: {
-        marginTop: 20,
-     },
-  }
+    paddingLeft: 10,
+    paddingRight: 10,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 20,
+    },
+  },
 }));
 
 export default function LandingPage() {
@@ -86,6 +87,8 @@ export default function LandingPage() {
                 variant="contained"
                 color="primary"
                 className={classes.button}
+                download
+                href={Resume}
               >
                 Download Resume
               </Button>
