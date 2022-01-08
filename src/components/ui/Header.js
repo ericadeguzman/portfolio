@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import { makeStyles, withThemeCreator } from "@material-ui/styles";
+import { makeStyles,} from "@material-ui/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Button from "@material-ui/core/Button";
@@ -20,6 +20,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import logo from "../../assets/logo.svg";
 import Resume from "../../assets/resume.pdf";  
+
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -138,12 +139,12 @@ export default function Header(props) {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [value, setValue] = useState(0);
+ 
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const handleChange = (e, newValue) => {
-    setValue(newValue);
+    props.setValue(newValue);
   };
 
   const handleClick = (e) => {
@@ -154,7 +155,7 @@ export default function Header(props) {
   const handleMenuItemClick = (e, i) => {
     setAnchorEl(null);
     setOpenMenu(false);
-    setSelectedIndex(1);
+    props.setSelectedIndex(1);
   };
 
   const handleClose = (e) => {
@@ -183,23 +184,23 @@ mouseOver: (event) => handleClick(event),
   [...menuOptions, ...routes].forEach(route => {
     switch (window.location.pathname) {
       case `${route.link}`:
-        if  (value !== route.activeIndex) {
-          setValue(route.activeIndex)
-          if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
-            setSelectedIndex(route.selectedIndex)
+        if  (props.value !== route.activeIndex) {
+          props.setValue(route.activeIndex)
+          if (route.selectedIndex && route.selectedIndex !== props.selectedIndex) {
+            props.setSelectedIndex(route.selectedIndex)
           }
         }
         break;
         default:
-          break;
+        break;
     }
   })  
-  }, [value, menuOptions, selectedIndex, routes]);
+  }, [props.value, menuOptions, props.selectedIndex, routes, props]);
 
   const tabs = (
     <React.Fragment>
       <Tabs
-        value={value}
+        value={props.value}
         onChange={handleChange}
         className={classes.tabContainer}
         indicatorColor="#fff"
@@ -244,16 +245,16 @@ mouseOver: (event) => handleClick(event),
         {menuOptions.map((option, i) => (
           <MenuItem
             disableRipple
-            key={`${option}${selectedIndex}`}
+            key={`${option}${i}`}
             component={Link}
             to={option.link}
             classes={{ root: classes.menuItem }}
             onClick={(event) => {
               handleMenuItemClick(event, i);
-              setValue(3);
+              props.setValue(3);
               handleClose();
             }}
-            seleced={i === selectedIndex && value === 1}
+            seleced={i === props.selectedIndex && props.value === 1}
           >
             {option.name}
           </MenuItem>
@@ -282,10 +283,13 @@ mouseOver: (event) => handleClick(event),
             button 
             component={Link} 
             to={route.link} 
-            selected={value === route.activeIndex}
+            selected={props.value === route.activeIndex}
             classes={{selected: classes.drawerItemSelected}}
-            onClick={() => {setOpenDrawer(false); setValue(route.activeIndex)}
-            }>
+            onClick={() => {
+              setOpenDrawer(false); 
+              props.setValue(route.activeIndex);
+            }}
+            >
               <ListItemText 
               className={classes.drawerItem}  
               disableTypography
@@ -296,13 +300,13 @@ mouseOver: (event) => handleClick(event),
           <ListItem
             onClick={() => {
               setOpenDrawer(false);
-              setValue(5);
+              props.setValue(5);
             }}
             divider
             button
             component={Link}
             to="/"
-            selected={value === 5}
+            selected={props.value === 5}
             classes={{selected: classes.drawerItemSelected}}
           >
             <ListItemText
@@ -334,7 +338,7 @@ mouseOver: (event) => handleClick(event),
               className={classes.logoContainer}
               component={Link}
               to="/portfolio/"
-              onClick={() => setValue(0)}
+              onClick={() => props.setValue(0)}
             >
               <img alt="edg logo" className={classes.logo} src={logo} />
             </Button>
@@ -343,6 +347,7 @@ mouseOver: (event) => handleClick(event),
         </AppBar>
       </ElevationScroll>
       <div className={classes.toolbarMargin} />
+      
     </React.Fragment>
   );
 }
