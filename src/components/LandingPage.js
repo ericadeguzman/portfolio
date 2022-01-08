@@ -8,6 +8,7 @@ import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
 import me from "../assets/img/me.jpg";
+import books from "../assets/img/books.jpg";
 import Resume from "../assets/resume.pdf";  
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 300,
     },
   },
+  books: {
+    maxWidth: "800px",
+    [theme.breakpoints.down("sm")]: {
+        maxWidth: "100%",
+      },
+  },
   txt: {
     ...theme.typography.text,
   },
@@ -34,14 +41,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
     marginLeft: "auto",
     marginTop: 50,
-    marginBottom: 50,
-    [theme.breakpoints.down("md")]: {
-      marginTop: 50,
-      marginBottom: 50,
-    },
+    marginBottom: 0,
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
-      marginBottom: 50,
+      marginBottom: 0,
     },
   },
   hello: {
@@ -59,16 +62,21 @@ export default function LandingPage() {
   return (
     <React.Fragment>
       <Box className={classes.container}>
+          <Grid container
+      direction="column"
+      justifyContent="center"
+      alignItems="center">        
+      <Grid item>
         <Grid
           container
           direction="row"
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} sm={6}>
             <img className={classes.me} src={me} alt="this is me" />
           </Grid>
-          <Grid className={classes.hello} item xs={12} sm={5}>
+          <Grid className={classes.hello} item xs={12} sm={6}>
             <Typography variant="h3" className={classes.txt}>
               Hello I'm Erica,
             </Typography>
@@ -94,8 +102,15 @@ export default function LandingPage() {
               </Button>
             </Box>
           </Grid>
+          </Grid>
+          </Grid>
+          <Box my={2}>
+          <Grid item xs={12} sm={12}><img className={classes.books} src={books} alt="ux books" /></Grid>
+          </Box>
         </Grid>
+        
       </Box>
+      
     </React.Fragment>
   );
 }
