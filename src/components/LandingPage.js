@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
   hello: {
       paddingLeft: 10,
       paddingRight: 10,
+      [theme.breakpoints.down("sm")]: {
+        marginTop: 20,
+     },
   }
 }));
 
