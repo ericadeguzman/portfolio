@@ -38,11 +38,11 @@ export default function Footer() {
         alignItems="center"
       >
         <Grid item xs={12}>
-          <Typography variant="body1" className={classes.link}>
-            {" "}
+          <Typography variant="body1" style={{textAlign: 'center', fontSize: '12px',}} className={classes.link}>
+         
             ericadeguzman.github.io/portfolio/ © {new Date().getFullYear()}
           </Typography>
-          <Typography variant="body1" style={{color: '#fff', fontStyle: 'italic', textAlign: 'center', marginTop: '5px'}}>
+          <Typography variant="body1" style={{fontSize: '12px', color: '#fff', fontStyle: 'italic', textAlign: 'center', marginTop: '5px'}}>
             Built with React and Mui v4
           </Typography>
         </Grid>
