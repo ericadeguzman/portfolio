@@ -6,27 +6,22 @@ import Grid from "@material-ui/core/Grid";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.purple,
     zIndex: 1300,
-    position: "relative",
-    padding: "2rem",
-    textAlign: "center",
+    padding: '4rem',
     color: "white",
-    fontFamily: "Raleway",
-    fontSize: "14px",
     bottom: "0",
     left: "0",
     right: "0",
-    position: 'absolute',
-    // [theme.breakpoints.down('sm')]: {
-    //   position: 'absolute',
-    // },
+    marginTop: '-4px',
+    position: "relative",
   },
   link: {
-    color: theme.palette.common.link,
+    color: theme.palette.common.white,
   },
 }));
 
@@ -38,32 +33,36 @@ export default function Footer() {
       <Grid
         container
         spacing={1}
-        direction="row"
+        direction="column"
         justifyContent="center"
         alignItems="center"
       >
         <Grid item xs={12}>
-          ericadeguzman.github.io/portfolio/ © {new Date().getFullYear()}
+          <Typography variant="body1" className={classes.link}>
+            {" "}
+            ericadeguzman.github.io/portfolio/ © {new Date().getFullYear()}
+          </Typography>
         </Grid>
         <Grid Item xs={12}>
           <Grid
-            style={{ marginTop: 20 }}
+            container
+            spacing={2}
+            style={{ marginTop: 10 }}
             direction="row"
             justifyContent="center"
             alignItems="center"
-            container
           >
-            <Grid item xs={1}>
+            <Grid item xs={4}>
               <ExternalLink href="https://www.linkedin.com/in/ericadg/">
                 <LinkedInIcon className={classes.link} />
               </ExternalLink>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={4}>
               <ExternalLink href="https://www.instagram.com/edgphoto/">
                 <InstagramIcon className={classes.link} />
               </ExternalLink>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={4}>
               <ExternalLink href="https://github.com/ericadeguzman/portfolio">
                 <GitHubIcon className={classes.link} />
               </ExternalLink>

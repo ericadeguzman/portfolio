@@ -9,50 +9,44 @@ import Button from "@material-ui/core/Button";
 
 import me from "../assets/img/me.jpg";
 import books from "../assets/img/books.jpg";
-import Resume from "../assets/resume.pdf";  
+import Resume from "../assets/resume.pdf";
 
 const useStyles = makeStyles((theme) => ({
-  button: {
-    ...theme.button,
-    marginRight: 6,
-    textTransform: "capitalize",
-    marginBottom: 6,
+  container: {
+    [theme.breakpoints.down("lg")]: {
+      marginBottom: 0,
+    },
+    [theme.breakpoints.down("md")]: {
+      marginBottom: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 0,
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 80,
+    },
   },
   me: {
-    maxWidth: 400,
+    [theme.breakpoints.down("lg")]: {
+      
+    },
     [theme.breakpoints.down("md")]: {
-      maxWidth: 400,
+      maxWidth: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      maxWidth: 300,
+      
     },
-  },
-  books: {
-    maxWidth: "800px",
-    [theme.breakpoints.down("sm")]: {
-        maxWidth: "100%",
-      },
-  },
-  txt: {
-    ...theme.typography.text,
-  },
-  container: {
-    maxWidth: "1000px",
-    marginRight: "auto",
-    marginLeft: "auto",
-    marginTop: 50,
-    marginBottom: 0,
-    [theme.breakpoints.down("sm")]: {
-      marginTop: 0,
-      marginBottom: 0,
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "100%",
     },
   },
   hello: {
-    paddingLeft: 10,
-    paddingRight: 10,
     [theme.breakpoints.down("sm")]: {
-      marginTop: 20,
+      marginTop: 5,
     },
+  },
+  button: {
+    ...theme.button,
   },
 }));
 
@@ -61,29 +55,34 @@ export default function LandingPage() {
 
   return (
     <React.Fragment>
-      <Box className={classes.container}>
-          <Grid container
-      direction="column"
-      justifyContent="center"
-      alignItems="center">        
-      <Grid item>
+        <Box className={classes.container}>
         <Grid
           container
           direction="row"
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={12} sm={6}>
+          <Grid sm={6} item>
             <img className={classes.me} src={me} alt="this is me" />
           </Grid>
-          <Grid className={classes.hello} item xs={12} sm={6}>
-            <Typography variant="h3" className={classes.txt}>
-              Hello I'm Erica,
-            </Typography>
-            <Typography className={classes.txt}>
-              a user experience designer from Orange County, CA.
-            </Typography>
-            <Box my={1}>
+          <Grid
+            container
+            direction="column"
+            sm={6}
+            item
+            className={classes.hello}
+            justifyContent="flex-start"
+            
+          >
+            <Box my={2} mx={2}>
+            <Grid item >
+              <Typography variant="h3">Hello I'm Erica,</Typography>
+              <Typography>
+                a user experience designer from Long Beach, CA.
+              </Typography>
+            </Grid>
+           
+              <Box my={2}>
               <Button
                 variant="contained"
                 color="primary"
@@ -100,17 +99,13 @@ export default function LandingPage() {
               >
                 Download Resume
               </Button>
+              </Box>
+           
             </Box>
           </Grid>
-          </Grid>
-          </Grid>
-          {/* <Box my={2}>
-          <Grid item xs={12} sm={12}><img className={classes.books} src={books} alt="ux books" /></Grid>
-          </Box> */}
         </Grid>
-        
-      </Box>
-      
+        </Box>
+
     </React.Fragment>
   );
 }
