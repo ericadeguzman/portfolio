@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50,
     marginBottom: 50,
     [theme.breakpoints.down("xs")]: {
-      maxWidth: "350px",
+      maxWidth: "350px",   
     },
   },
   button: {
@@ -71,7 +71,7 @@ export default function Contact(props) {
   return (
     <React.Fragment>
       <Box my={5}>
-        <Grid container direction="column" alignContent="center">
+        <Grid container direction="column" alignContent="center" className={classes.container}>
           <Grid item>
             <Box my={2}>
               <Typography variant="h4">Hello!</Typography>
