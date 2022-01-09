@@ -42,6 +42,9 @@ export default function Footer() {
             {" "}
             ericadeguzman.github.io/portfolio/ © {new Date().getFullYear()}
           </Typography>
+          <Typography variant="body1" style={{color: '#fff', fontStyle: 'italic', textAlign: 'center', marginTop: '5px'}}>
+            Built with React and Mui v4
+          </Typography>
         </Grid>
         <Grid Item xs={12}>
           <Grid

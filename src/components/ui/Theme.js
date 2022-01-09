@@ -91,6 +91,11 @@ export default createTheme({
         fontWeight: "normal",
         color: edgGrey,
       },
+      h5: {
+        fontFamily: "Raleway",
+        fontWeight: "normal",
+        color: edgGrey,
+      },
     },
   },
 });
