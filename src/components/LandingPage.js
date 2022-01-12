@@ -91,7 +91,7 @@ export default function LandingPage() {
                 color="primary"
                 className={classes.button}
                 component={Link}
-                to="/portfolio/photography"
+                to="/portfolio/projects"
               >
                 My Projects
               </Button>
