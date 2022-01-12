@@ -161,25 +161,25 @@ export default function Header(props) {
     setOpenMenu(false);
   };
 
-  const menuOptions = [
-    { name: "Social", link: "/portfolio/social", activeIndex: 3, selectedIndex: 0 },
-    { name: "Github", link: "/portfolio/social/github", activeIndex: 3, selectedIndex: 1  },
-    { name: "Dribble", link: "/portfolio/social/dribble", activeIndex: 3, selectedIndex: 2 },
-    { name: "Vsco", link: "/portfolio/social/vsco", activeIndex: 3, selectedIndex: 3  },
-  ];
+  // const menuOptions = [
+  //   { name: "Social", link: "/portfolio/social", activeIndex: 3, selectedIndex: 0 },
+  //   { name: "Github", link: "/portfolio/social/github", activeIndex: 3, selectedIndex: 1  },
+  //   { name: "Dribble", link: "/portfolio/social/dribble", activeIndex: 3, selectedIndex: 2 },
+  //   { name: "Vsco", link: "/portfolio/social/vsco", activeIndex: 3, selectedIndex: 3  },
+  // ];
   const routes= [
     {name: "About", link: "/portfolio/", activeIndex: 0 },
     {name: "Projects", link: "/portfolio/projects", activeIndex: 1 },
     {name: "Photography", link: "/portfolio/photography", activeIndex: 2 },
-    {name: "Social", link: "/portfolio/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
-  ariaPopup: anchorEl ? "true" : undefined, 
-mouseOver: (event) => handleClick(event), 
-},
+//     {name: "Social", link: "/portfolio/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
+//   ariaPopup: anchorEl ? "true" : undefined, 
+// mouseOver: (event) => handleClick(event), 
+// },
     {name: "Contact", link: "/portfolio/contact", activeIndex: 4 },
   ]
 
   useEffect(() => {
-  [...menuOptions, ...routes].forEach(route => {
+  [ ...routes].forEach(route => {
     switch (window.location.pathname) {
       case `${route.link}`:
         if  (props.value !== route.activeIndex) {
@@ -193,7 +193,7 @@ mouseOver: (event) => handleClick(event),
         break;
     }
   })  
-  }, [props.value, menuOptions, props.selectedIndex, routes, props]);
+  }, [props.value,  props.selectedIndex, routes, props]);
 
   const tabs = (
     <React.Fragment>
@@ -229,7 +229,7 @@ mouseOver: (event) => handleClick(event),
       >
         Resume
       </Button>
-      <Menu
+      {/* <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={openMenu}
@@ -257,7 +257,7 @@ mouseOver: (event) => handleClick(event),
             {option.name}
           </MenuItem>
         ))}
-      </Menu>
+      </Menu> */}
     </React.Fragment>
   );
 
