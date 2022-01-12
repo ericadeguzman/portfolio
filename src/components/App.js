@@ -28,11 +28,11 @@ function App() {
         selectedIndex} setSelectedIndex={setSelectedIndex}/>
       
       <Routes>
-        <Route path="/portfolio/" element={<LandingPage />} />
-        <Route path="/portfolio/projects" element={<Projects />} />
-        <Route path="/portfolio/photography" element={<Photography />}/>
-        <Route path="/portfolio/social" element={<Social />} />
-        <Route path="/portfolio/contact" element={<Contact />}/>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/photography" element={<Photography />}/>
+        {/* <Route path="/social" element={<Social />} /> */}
+        <Route path="/contact" element={<Contact />}/>
       </Routes>
 
      <Footer />

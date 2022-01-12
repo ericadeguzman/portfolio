@@ -168,14 +168,14 @@ export default function Header(props) {
   //   { name: "Vsco", link: "/portfolio/social/vsco", activeIndex: 3, selectedIndex: 3  },
   // ];
   const routes= [
-    {name: "About", link: "/portfolio/", activeIndex: 0 },
-    {name: "Projects", link: "/portfolio/projects", activeIndex: 1 },
-    {name: "Photography", link: "/portfolio/photography", activeIndex: 2 },
+    {name: "About", link: "/", activeIndex: 0 },
+    {name: "Projects", link: "/projects", activeIndex: 1 },
+    {name: "Photography", link: "/photography", activeIndex: 2 },
 //     {name: "Social", link: "/portfolio/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
 //   ariaPopup: anchorEl ? "true" : undefined, 
 // mouseOver: (event) => handleClick(event), 
 // },
-    {name: "Contact", link: "/portfolio/contact", activeIndex: 4 },
+    {name: "Contact", link: "/contact", activeIndex: 4 },
   ]
 
   useEffect(() => {
@@ -335,7 +335,7 @@ export default function Header(props) {
               disableRipple
               className={classes.logoContainer}
               component={Link}
-              to="/portfolio/"
+              to="/"
               onClick={() => props.setValue(0)}
             >
               <img alt="edg logo" className={classes.logo} src={logo} />
