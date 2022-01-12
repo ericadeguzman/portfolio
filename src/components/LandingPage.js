@@ -6,10 +6,13 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom';
+
 
 import me from "../assets/img/me.jpg";
 import books from "../assets/img/books.jpg";
 import Resume from "../assets/resume.pdf";
+import Projects from '../components/Projects';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -87,6 +90,8 @@ export default function LandingPage() {
                 variant="contained"
                 color="primary"
                 className={classes.button}
+                component={Link}
+                to="/portfolio/photography"
               >
                 My Projects
               </Button>
