@@ -1,7 +1,7 @@
 import React,  {useState, } from "react";
 import { ThemeProvider } from "@material-ui/styles";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter>
       <Header value={value} setValue={setValue} selectedIndex={
         selectedIndex} setSelectedIndex={setSelectedIndex}/>
       
@@ -36,7 +36,7 @@ function App() {
       </Routes>
 
      <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
