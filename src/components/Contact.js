@@ -14,7 +14,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import emailjs from "@emailjs/browser";
 
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
+
 
 const Result = () => {
   return <p>Your message has been sent. talk to you soon!</p>;
@@ -23,10 +23,14 @@ const useStyles = makeStyles((theme) => ({
   container: {
     marginRight: "auto",
     marginLeft: "auto",
+    paddingRight: 20,
+    paddingLeft: 20,
     marginTop: 50,
     marginBottom: 50,
     [theme.breakpoints.down("xs")]: {
       maxWidth: "350px",
+      paddingRight: 10,
+      paddingLeft: 10,
     },
   },
   button: {
@@ -35,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
   },
   message: {
     border: `1px solid ${theme.palette.common.lightgrey}`,
-    marginTop: "20px",
     borderRadius: 5,
   },
 }));
@@ -113,7 +116,7 @@ export default function Contact(props) {
             </Grid>
             <Grid item>
               <Divider />
-              <Box my={2}>
+              <Box mt={2}>
                 <Typography variant="body1">
                   Ready to a start a project with me?
                 </Typography>
@@ -127,7 +130,7 @@ export default function Contact(props) {
             </Grid>
 
             <Grid item>
-              <Box my={2}>
+              <Box mb={1}>
                 <TextField
                   name="name"
                   fullWidth
@@ -139,7 +142,7 @@ export default function Contact(props) {
               </Box>
             </Grid>
             <Grid item>
-              <Box my={2}>
+              <Box my={1}>
                 <TextField
                   name="email"
                   fullWidth
@@ -172,7 +175,7 @@ export default function Contact(props) {
               item
               direction="row"
               xs={12}
-              md={5}
+              md={6}
               justifyContent="flex-end"
             >
               <Box my={1}>
@@ -189,14 +192,13 @@ export default function Contact(props) {
                   value="Send"
                 >
                   Send Message 
-                  <MailOutlineIcon  style={{paddingLeft: '10px'}}/>
                 </Button>   
               </Box>
             </Grid>
-            <Grid item container  direction="row" xs={12} md={5}  justifyContent="flex-end">
+            <Grid item container  direction="row" xs={12} md={6}  justifyContent="flex-end">
             <Typography variant="body1">
                 {result ? <Result /> : null}
-                </Typography>
+             </Typography>
             </Grid>
           </Grid>
         </form>
