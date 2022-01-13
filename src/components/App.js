@@ -4,6 +4,7 @@ import {
   HashRouter,
   Routes,
   Route,
+  BrowserRouter,
 } from "react-router-dom";
 
 import theme from "../components/ui/Theme";

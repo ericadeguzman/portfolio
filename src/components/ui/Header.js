@@ -104,32 +104,22 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
   },
   drawer: {
-    backgroundColor: theme.palette.common.purple,
+    width: '75%',
+    // backgroundColor: theme.palette.common.purple,
+    borderRight:  '4px solid #525268'
   },
   drawerItem: {
     ...theme.typography.tab,
-    color: "white",
-    opacity: "0.7",  
-  },
-  drawerItemResume: {
-    ...theme.typography.tab,
-    color: theme.palette.common.purple,
-    "&:hover": {
-      color: 'white',
-    },
-  },
-  drawerItemResumeBackground: {
-    backgroundColor: theme.palette.common.lightpurple,
+    color: theme.palette.common.purple, 
+    fontSize: '16px',
+    paddingTop:2,
+    paddingBottom:2,
   },
   drawerItemSelected: {
-    opacity: 1,
-    fontWeight: 'bold',
-    "& .MuiLitItemText-root": {
-      opacity: 1
-    }
+    
   },
   appBar: {
-    zIndex: theme.zIndex.modal + 1, 
+    // zIndex: theme.zIndex.modal + 1, 
   },
 }));
 
@@ -161,17 +151,17 @@ export default function Header(props) {
     setOpenMenu(false);
   };
 
-  // const menuOptions = [
-  //   { name: "Social", link: "/portfolio/social", activeIndex: 3, selectedIndex: 0 },
-  //   { name: "Github", link: "/portfolio/social/github", activeIndex: 3, selectedIndex: 1  },
-  //   { name: "Dribble", link: "/portfolio/social/dribble", activeIndex: 3, selectedIndex: 2 },
-  //   { name: "Vsco", link: "/portfolio/social/vsco", activeIndex: 3, selectedIndex: 3  },
-  // ];
+  const menuOptions = [
+    { name: "Social", link: "/social", activeIndex: 3, selectedIndex: 0 },
+    { name: "Github", link: "/social/github", activeIndex: 3, selectedIndex: 1  },
+    { name: "Dribble", link: "/social/dribble", activeIndex: 3, selectedIndex: 2 },
+    { name: "Vsco", link: "/social/vsco", activeIndex: 3, selectedIndex: 3  },
+  ];
   const routes= [
     {name: "About", link: "/", activeIndex: 0 },
     {name: "Projects", link: "/projects", activeIndex: 1 },
     {name: "Photography", link: "/photography", activeIndex: 2 },
-//     {name: "Social", link: "/portfolio/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
+//     {name: "Social", link: "/social", activeIndex: 3, ariaOwns: anchorEl ? "simple-menu" : undefined, 
 //   ariaPopup: anchorEl ? "true" : undefined, 
 // mouseOver: (event) => handleClick(event), 
 // },
@@ -179,7 +169,7 @@ export default function Header(props) {
   ]
 
   useEffect(() => {
-  [ ...routes].forEach(route => {
+  [ ...menuOptions, ...routes].forEach(route => {
     switch (window.location.pathname) {
       case `${route.link}`:
         if  (props.value !== route.activeIndex) {
@@ -193,7 +183,7 @@ export default function Header(props) {
         break;
     }
   })  
-  }, [props.value,  props.selectedIndex, routes, props]);
+  }, [props.value, menuOptions, props.selectedIndex, routes, props]);
 
   const tabs = (
     <React.Fragment>
@@ -229,7 +219,7 @@ export default function Header(props) {
       >
         Resume
       </Button>
-      {/* <Menu
+      <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={openMenu}
@@ -257,13 +247,12 @@ export default function Header(props) {
             {option.name}
           </MenuItem>
         ))}
-      </Menu> */}
+      </Menu>
     </React.Fragment>
   );
 
   const drawer = (
-    <React.Fragment>
-      
+    <React.Fragment>  
       <SwipeableDrawer
         // disableBackdropTransition={!iOS}
         // disableDiscovery={iOS}
@@ -272,7 +261,6 @@ export default function Header(props) {
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: classes.drawer }}
       >
-        <div className={classes.toolbarMargin} />
         <List disablePadding>
           {routes.map(route => (
             <ListItem 
