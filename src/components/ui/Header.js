@@ -106,14 +106,14 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: '75%',
     // backgroundColor: theme.palette.common.purple,
-    borderRight:  '4px solid #525268'
+    borderRight:  '6px solid #525268'
   },
   drawerItem: {
     ...theme.typography.tab,
     color: theme.palette.common.purple, 
-    fontSize: '16px',
-    paddingTop:2,
-    paddingBottom:2,
+    fontSize: '18px',
+    paddingTop:4,
+    paddingBottom:4,
   },
   drawerItemSelected: {
     
