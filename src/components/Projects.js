@@ -27,18 +27,18 @@ export default function Projects() {
   const classes = useStyles();
 
   return (
-
     <React.Fragment>
-    <Box className={classes.container}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="flex-start"
-        alignItems="center"
-      >
-          <Typography variant="h4"> Projects </Typography>
-          <Typography variant="body1">Yeah... sorry this page is under construction. I need more coffee.</Typography>
-      </Grid>
+      <Box className={classes.container}>
+        <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4"> Projects</Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="body1">
+              Yeah... sorry this page is under construction. I need more coffee.
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
     </React.Fragment>
   );
