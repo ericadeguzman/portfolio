@@ -43,7 +43,7 @@ export default function Footer() {
             ericadeguzman.github.io/portfolio/ © {new Date().getFullYear()}
           </Typography>
           <Typography variant="body1" style={{fontSize: '12px', color: '#fff', fontStyle: 'italic', textAlign: 'center', marginTop: '5px'}}>
-            Built with React and Mui v4
+           email me @ <a style={{color: '#fff',}} href="mailto:erricadg@gmail.com">erricadg@gmail.com</a>
           </Typography>
         </Grid>
         <Grid Item xs={12}>
