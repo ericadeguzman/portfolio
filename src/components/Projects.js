@@ -9,24 +9,17 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    maxWidth: "1000px",
-    marginRight: 'auto',
-    marginLeft: 'auto',
+    marginRight: "auto",
+    marginLeft: "auto",
+    paddingRight: 20,
+    paddingLeft: 20,
     marginTop: 50,
     marginBottom: 50,
-    [theme.breakpoints.down("md")]: {
-       marginTop: 50,
-       marginBottom: 50,
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "350px",
+      paddingRight: 10,
+      paddingLeft: 10,
     },
-    [theme.breakpoints.down("sm")]: {
-       marginTop: 0,
-       marginBottom: 50,
-       marginLeft: 10,
-       marginRgith: 10,
-    },
-  },
-  txt: {
-    ...theme.typography.text,
   },
 }));
 
@@ -43,7 +36,8 @@ export default function Projects() {
         justifyContent="flex-start"
         alignItems="center"
       >
-          <Typography variant="h4" className={classes.txt}> Projects </Typography>
+          <Typography variant="h4"> Projects </Typography>
+          <Typography variant="body1">Yeah... sorry this page is under construction. I need more coffee.</Typography>
       </Grid>
       </Box>
     </React.Fragment>
