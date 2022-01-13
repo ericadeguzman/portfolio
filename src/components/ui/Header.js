@@ -37,13 +37,13 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: '.9em',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '.9em'
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '.9em'
-    },
+    // marginBottom: '.9em',
+    // [theme.breakpoints.down('md')]: {
+    //   marginBottom: '.9em'
+    // },
+    // [theme.breakpoints.down('xs')]: {
+    //   marginBottom: '.9em'
+    // },
   },
   logo: {
     height: "2em",
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
     minWidth: 10,
     marginLeft: "5px",
-    marginTop: '20px',
+    // marginTop: '20px',
     color: "#525268",
     "&:hover": {
       fontWeight: "bold",
@@ -210,7 +210,7 @@ export default function Header(props) {
         />
         ))}
       </Tabs>
-      <Button
+      {/* <Button
         className={classes.button}
         download
         href={Resume}
@@ -218,7 +218,7 @@ export default function Header(props) {
         color="primary"
       >
         Resume
-      </Button>
+      </Button> */}
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -283,7 +283,7 @@ export default function Header(props) {
               </ListItemText>
             </ListItem>
           ))}
-          <ListItem
+          {/* <ListItem
             onClick={() => {
               setOpenDrawer(false);
               props.setValue(5);
@@ -301,7 +301,7 @@ export default function Header(props) {
             >
               Resume
             </ListItemText>
-          </ListItem>
+          </ListItem> */}
         </List>
       </SwipeableDrawer>
       <IconButton
