@@ -35,7 +35,8 @@ export default function Projects() {
           </Grid>
           <Grid item>
             <Typography variant="body1">
-              Yeah... sorry this page is under construction. I need more coffee.
+              Yeah... sorry this page is under construction. I need more coffee. 
+              In the meantime please visit my <a  target="_blank" href="https://ericadeguzman.com/home/">old portfolio.</a>
             </Typography>
           </Grid>
         </Grid>
