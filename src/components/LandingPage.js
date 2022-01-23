@@ -99,10 +99,12 @@ export default function LandingPage() {
                 variant="contained"
                 color="primary"
                 className={classes.button}
-                download
-                href={Resume}
+                component={Link}
+                to="/photography"
+                // download
+                // href={Resume}
               >
-                Download Resume
+                Photography
               </Button>
               </Box>
            
