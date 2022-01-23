@@ -6,6 +6,11 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import { Divider } from "@material-ui/core";
+import thumb_peak from "../assets/img/projects/thumb_peak.png";
+import thumb_sway from "../assets/img/projects/thumb_sway.png";
+import thumb_fowler from "../assets/img/projects/thumb_fowler.png";
+import { BorderTop } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -15,12 +20,17 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 20,
     marginTop: 50,
     marginBottom: 50,
+    maxWidth: 900,
+    [theme.breakpoints.down("sm")]: {     
+      paddingRight: 20,
+      paddingLeft: 20,
+    },
     [theme.breakpoints.down("xs")]: {
-      maxWidth: "350px",
       paddingRight: 10,
       paddingLeft: 10,
     },
   },
+
 }));
 
 export default function Projects() {
@@ -29,18 +39,24 @@ export default function Projects() {
   return (
     <React.Fragment>
       <Box className={classes.container}>
-        <Grid container direction="column" alignContent="flex-start">
-          <Grid item>
-            <Typography variant="h4"> Projects</Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body1">
-              Yeah... sorry this page is under construction. I need more coffee. 
-              In the meantime please visit my <a  target="_blank" href="https://ericadeguzman.com/home/">old portfolio.</a>
-            </Typography>
+        <Grid container direction="column" alignContent="" justifyContent="flex-start">
+          <Grid item xs={12}>
+            <Typography variant="h4"> Projects</Typography>  
+           </Grid>
+           <Box my={1}/>
+          <Grid style={{marginTop: 20,}} container item direction="row" xs={12} justifyContent="center">
+            <Grid item xs={12} sm={6} direction="column">
+              <Grid item><img style={{width: '100%'}} src={thumb_fowler} alt="Fowler School of Engineering" /></Grid>
+              <Grid item><img style={{width: '100%'}} src={thumb_sway} alt="Sway" /></Grid>
+            </Grid>
+            <Grid item xs={12} sm={6} >
+            <img style={{width: '100%'}}  src={thumb_peak} alt="Peak Fitness" />
+            <Box my={6}/>
+            </Grid>
           </Grid>
         </Grid>
       </Box>
+      
     </React.Fragment>
   );
 }

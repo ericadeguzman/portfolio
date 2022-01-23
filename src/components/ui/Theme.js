@@ -33,7 +33,7 @@ export default createTheme({
   },
   typography: {
     tab: {
-      fontSize: "13px",
+      fontSize: "14px",
       fontFamily: "Raleway",
       fontWeight: "normal",
     },
