@@ -36,7 +36,7 @@ export default function Photography() {
           <Grid item>
             <Typography variant="body1">
               Yeah... sorry this page is under construction. I need more coffee.
-              In the meantime please visit my <a  target="_blank" href="https://ericadeguzman.com/photography/">old portfolio.</a>
+              In the meantime please visit my <a  target="_blank" href="https://vsco.co/ericadg/gallery">VSCO</a>
             </Typography>
           </Grid>
         </Grid>
