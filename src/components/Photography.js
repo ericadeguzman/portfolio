@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { Divider, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import jiufen from "../assets/img/photography/taiwan/jiufen_900.jpg";
+import jiufen from "../assets/img/photography/taiwan/jiufen_1024.jpg";
 import jiufenLight from "../assets/img/photography/taiwan/jiufenLight.jpg";
 import cook from "../assets/img/photography/taiwan/cook.jpg";
 import riceTerraces from "../assets/img/photography/banaue/riceTerraces.jpg";
