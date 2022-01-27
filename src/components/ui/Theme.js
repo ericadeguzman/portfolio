@@ -32,6 +32,10 @@ export default createTheme({
     marginBottom: 6,
   },
   typography: {
+    default: {
+      fontFamily: "Raleway",
+      fontWeight: "normal",
+    },
     tab: {
       fontSize: "14px",
       fontFamily: "Raleway",
