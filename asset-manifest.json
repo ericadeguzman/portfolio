@@ -1,22 +1,33 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.7f29c106.js",
+    "main.js": "/portfolio/static/js/main.de269fca.js",
+    "static/media/family.jpg": "/portfolio/static/media/family.dfb61fd2e9a1a044f7f1.jpg",
+    "static/media/bicyclist.jpg": "/portfolio/static/media/bicyclist.1d2e510f42bee0afa24f.jpg",
+    "static/media/reindeer.jpg": "/portfolio/static/media/reindeer.c324287618d9963468dc.jpg",
     "static/media/jiufen_900.jpg": "/portfolio/static/media/jiufen_900.b2f3c35233edc043ad17.jpg",
     "static/media/couple_pug.jpg": "/portfolio/static/media/couple_pug.6773b64c005fe38e1874.jpg",
+    "static/media/deer.jpg": "/portfolio/static/media/deer.dd10afb4d384e8a84812.jpg",
     "static/media/gma.jpg": "/portfolio/static/media/gma.f2af5ac8374f1e641654.jpg",
-    "static/media/yellow_coat.jpg": "/portfolio/static/media/yellow_coat.27b20aaa23f6f5f6b962.jpg",
+    "static/media/buffalo_herd.jpg": "/portfolio/static/media/buffalo_herd.e942e0886aa90a290a12.jpg",
+    "static/media/bear.jpg": "/portfolio/static/media/bear.1acf18ac0deb9b1541e9.jpg",
     "static/media/motorcycle_mom.jpg": "/portfolio/static/media/motorcycle_mom.f2213287d9e36c3a65d9.jpg",
+    "static/media/buffalo.jpg": "/portfolio/static/media/buffalo.66f890680076176f5b98.jpg",
     "static/media/girl_nightmarket.jpg": "/portfolio/static/media/girl_nightmarket.e89d945b37bbc3fa09e1.jpg",
     "static/media/khoa_nightmarket.jpg": "/portfolio/static/media/khoa_nightmarket.51f3582f22c3c7940894.jpg",
     "static/media/khoa_nightmarket1.jpg": "/portfolio/static/media/khoa_nightmarket1.992a4919adc0f8009cf1.jpg",
+    "static/media/yellow_coat.jpg": "/portfolio/static/media/yellow_coat.8edf613193dc57733786.jpg",
     "static/media/old_couple1.jpg": "/portfolio/static/media/old_couple1.30a898985cf3467327e1.jpg",
     "static/media/old_couple.jpg": "/portfolio/static/media/old_couple.5251df708781bcd60f4c.jpg",
     "static/media/resume.pdf": "/portfolio/static/media/resume.9899a166ddbb6d87f6cc.pdf",
-    "static/media/jiufenLight.jpg": "/portfolio/static/media/jiufenLight.cb06ba04f0cfaa7ca703.jpg",
     "static/media/motorcycle_alley.jpg": "/portfolio/static/media/motorcycle_alley.e736588168b0b4f04832.jpg",
     "static/media/grill_nightmarket.jpg": "/portfolio/static/media/grill_nightmarket.cf7e9763d9c15b0084f0.jpg",
     "static/media/nightMarket_alley.jpg": "/portfolio/static/media/nightMarket_alley.2d46787cbe2c45a0c105.jpg",
+    "static/media/jiufenLight.jpg": "/portfolio/static/media/jiufenLight.acb787ed09415b7ae749.jpg",
     "static/media/jasper.jpg": "/portfolio/static/media/jasper.c6a7122922a36874f366.jpg",
+    "static/media/mountains.jpg": "/portfolio/static/media/mountains.6d47e97f115a7a35093f.jpg",
+    "static/media/moose.jpg": "/portfolio/static/media/moose.4b6fd59b41b96e13f511.jpg",
+    "static/media/canyon.jpg": "/portfolio/static/media/canyon.cf1872c542fd49702617.jpg",
+    "static/media/akihabara.jpg": "/portfolio/static/media/akihabara.70d428c8247784a3c671.jpg",
     "static/media/cook.jpg": "/portfolio/static/media/cook.e5bb093fb8972206f26b.jpg",
     "static/media/bowRiver.jpg": "/portfolio/static/media/bowRiver.ca471647a69eefb19516.jpg",
     "static/media/thumb_peak.png": "/portfolio/static/media/thumb_peak.8479b5914c274fcf1ba8.png",
@@ -31,9 +42,9 @@
     "static/media/me.jpg": "/portfolio/static/media/me.ade0177da1f0c8ecfcab.jpg",
     "static/media/logo.svg": "/portfolio/static/media/logo.eccfaec327e0aff4e29665075c011771.svg",
     "index.html": "/portfolio/index.html",
-    "main.7f29c106.js.map": "/portfolio/static/js/main.7f29c106.js.map"
+    "main.de269fca.js.map": "/portfolio/static/js/main.de269fca.js.map"
   },
   "entrypoints": [
-    "static/js/main.7f29c106.js"
+    "static/js/main.de269fca.js"
   ]
 }
