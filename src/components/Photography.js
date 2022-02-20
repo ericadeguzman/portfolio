@@ -7,14 +7,28 @@ import Box from "@material-ui/core/Box";
 import { Divider, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import jiufen from "../assets/img/photography/taiwan/jiufen_900.jpg";
+import nightMarket_alley from "../assets/img/photography/taiwan/nightMarket_alley.jpg";
+import old_couple from "../assets/img/photography/taiwan/old_couple.jpg";
+import old_couple1 from "../assets/img/photography/taiwan/old_couple1.jpg";
+import motorcycle_mom from "../assets/img/photography/taiwan/motorcycle_mom.jpg";
+import motorcycle_alley from "../assets/img/photography/taiwan/motorcycle_alley.jpg";
+import khoa from "../assets/img/photography/taiwan/khoa_nightmarket.jpg";
+import khoa1 from "../assets/img/photography/taiwan/khoa_nightmarket1.jpg";
+import girl_nightmarket from "../assets/img/photography/taiwan/girl_nightmarket.jpg";
+import grill_nightmarket from "../assets/img/photography/taiwan/grill_nightmarket.jpg";
+import gma from "../assets/img/photography/taiwan/gma.jpg";
 import jiufenLight from "../assets/img/photography/taiwan/jiufenLight.jpg";
 import cook from "../assets/img/photography/taiwan/cook.jpg";
 import couple from "../assets/img/photography/taiwan/couple_pug.jpg";
-import mother from "../assets/img/photography/taiwan/mom_and_son.jpg";
-import family from "../assets/img/photography/taiwan/family.jpg";
+import yellowCoat from "../assets/img/photography/taiwan/yellow_coat.jpg";
 import riceTerraces from "../assets/img/photography/banaue/riceTerraces.jpg";
 import banaueLodge from "../assets/img/photography/banaue/lodge.jpg";
 import banaueVillage from "../assets/img/photography/banaue/banaueVillage.jpg";
+import banff from "../assets/img/photography/banff/banff.jpg";
+import bowRiver from "../assets/img/photography/banff/bowRiver.jpg";
+import hiking from "../assets/img/photography/banff/hiking.jpg";
+import jasper from "../assets/img/photography/banff/jasper.jpg";
+
 
 const useStyles = makeStyles((theme) => ({
   photographyHeader: {
@@ -77,29 +91,127 @@ export default function Photography() {
 
   return (
     <React.Fragment>
+            <Box className={classes.photographyHeader}>
+      <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4">Jiufen, Taiwan 2019</Typography>
+          </Grid>
+          </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={jiufen} alt="Jiufen" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Jiufen, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">       
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={jiufenLight} alt="boy walking throught alley in Jiufen" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Jiufen, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={yellowCoat} alt="Biker with a yellow rain coat" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Yellow Coat - Jiufen, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
       <Box className={classes.photographyHeader}>
       <Grid container direction="column" alignContent="flex-start">
           <Grid item>
-            <Typography variant="h4">Photography </Typography>
+            <Typography variant="h4"> Night Market, Taiwan 2019 </Typography>
           </Grid>
           </Grid>
       </Box>
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center">       
           <Grid item  xs={12}>
-          <img style={{width: '100%'}}  src={jiufenLight} alt="Jiufen alley" />
+          <img style={{width: '100%'}}  src={khoa1} alt="khoa at the night market" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-          Jiufen street alley, Taiwan 2019
+          Night Market, Taiwan 2019
           </Typography>
           </Grid>
         </Grid>
       </Box>
-      <Box className={classes.container}>
-        <Grid container direction="column" alignContent="center">
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={motorcycle_mom} alt="mom and daughter on motorcycle" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">       
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={old_couple} alt="old couple" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={couple} alt="couple with bull dog" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">       
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={grill_nightmarket} alt="grill" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={girl_nightmarket} alt="girl walking" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+  
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
           <Grid item xs={12}>
-          <img style={{width: '100%'}}  src={cook} alt="Jiufen, Taiwan" />
+          <img style={{width: '100%'}}  src={gma} alt="grandma" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-            Jiufen, Taiwan 2019
+          Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={nightMarket_alley} alt="night market alley" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Night Market, Taiwan 2019
           </Typography>
           </Grid>
         </Grid>
@@ -107,25 +219,29 @@ export default function Photography() {
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center">       
           <Grid item  xs={12}>
-          <img style={{width: '100%'}}  src={family} alt="family stall" />
+          <img style={{width: '100%'}}  src={old_couple1} alt="old couple" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-          Family stall, Taiwan 2019
+          Night Market, Taiwan 2019
           </Typography>
           </Grid>
         </Grid>
       </Box>
       <Box className={classes.container2}>
-        <Grid container direction="row" alignContent="center" spacing={4}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
           <Grid item xs={12} sm={6}>
-          <img style={{width: '100%'}}  src={mother} alt="Mother and son at Night Market" />
+          <img style={{width: '100%'}}  src={motorcycle_alley} alt="Motorcyclist" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-          Mother and son at Night Market, Taiwan 2019
+          Night Market, Taiwan 2019
           </Typography>
           </Grid>
-          <Grid item xs={12} sm={6}>
-          <img style={{width: '100%'}}  src={couple} alt="Couple with pug in Night Market" />
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">       
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={khoa} alt="khoa at the night market" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-            Couple with pug in Night Market, Taiwan 2019
+          Night Market, Taiwan 2019
           </Typography>
           </Grid>
         </Grid>
@@ -133,35 +249,16 @@ export default function Photography() {
       <Box className={classes.photographyHeader}>
       <Grid container direction="column" alignContent="flex-start">
           <Grid item>
-            <Typography variant="h4">Jiufen</Typography>
+            <Typography variant="h4">Banaue Rice Terraces, Philippines 2018</Typography>
           </Grid>
           </Grid>
       </Box>
-      <Box className={classes.container}>
+      <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center">
-          {/* <Grid item>
-            <Typography variant="h4">Taiwan </Typography>
-          </Grid>
-          <Box my={1}/> */}
-          <Grid item  xs={12}>
-          <img style={{width: '100%'}}  src={jiufen} alt="Jiufen, Taiwan" />
-          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-            Jiufen, Taiwan 2019
-          </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-      {/* <Box className={classes.container2}>
-        <Grid container direction="column" alignContent="center">
-          <Grid item>
-          <Box >
-            <Typography variant="h4"> Banaue</Typography>
-            </Box>
-          </Grid>
           <Grid item  xs={12}>
           <img style={{width: '100%'}}  src={riceTerraces} alt="Rice Terraces, Banaue" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-          Rice Terraces, Banaue 2018
+          Rice Terraces - Banaue, Philippines 2018
           </Typography>
           </Grid>
         </Grid>
@@ -184,11 +281,62 @@ export default function Photography() {
           <Box my={1}/>
           <img style={{width: '100%'}}  src={banaueVillage} alt="Village, Banaue" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
-          Village, Banaue 2018
+          Banaue, Philippines 2018
           </Typography>
           </Grid>
         </Grid>
-      </Box> */}
+      </Box>
+      <Box className={classes.photographyHeader}>
+      <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4">Alberta, Canada 2017</Typography>
+          </Grid>
+          </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <Box my={1}/>
+          <img style={{width: '100%'}}  src={banff} alt="Banff  National Park, Canada" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Banff National Park, Canada
+          </Typography>
+          </Grid>
+        </Grid>
+        </Box>
+        <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <Box my={1}/>
+          <img style={{width: '100%'}}  src={bowRiver} alt="Bow River, Canada" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Bow River - Banff National Park, Canada
+          </Typography>
+          </Grid>
+        </Grid> 
+        </Box>
+        <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <Box my={2}/>
+          <img style={{width: '100%'}}  src={hiking} alt="Banff National Park, Canada" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Banff National Park, Canada
+          </Typography>
+          </Grid>
+        </Grid>
+        </Box>
+        <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <Box my={1}/>
+          <img style={{width: '100%'}}  src={jasper} alt="Jasper Park, Canada" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Jasper National Park, Canada
+          </Typography>
+          </Grid>
+        </Grid>
+       </Box>
     </React.Fragment>
   );
 }
