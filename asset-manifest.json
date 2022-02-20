@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.09021ef3.js",
+    "main.js": "/portfolio/static/js/main.7f29c106.js",
+    "static/media/jiufen_900.jpg": "/portfolio/static/media/jiufen_900.b2f3c35233edc043ad17.jpg",
+    "static/media/couple_pug.jpg": "/portfolio/static/media/couple_pug.6773b64c005fe38e1874.jpg",
+    "static/media/gma.jpg": "/portfolio/static/media/gma.f2af5ac8374f1e641654.jpg",
+    "static/media/yellow_coat.jpg": "/portfolio/static/media/yellow_coat.27b20aaa23f6f5f6b962.jpg",
+    "static/media/motorcycle_mom.jpg": "/portfolio/static/media/motorcycle_mom.f2213287d9e36c3a65d9.jpg",
+    "static/media/girl_nightmarket.jpg": "/portfolio/static/media/girl_nightmarket.e89d945b37bbc3fa09e1.jpg",
+    "static/media/khoa_nightmarket.jpg": "/portfolio/static/media/khoa_nightmarket.51f3582f22c3c7940894.jpg",
+    "static/media/khoa_nightmarket1.jpg": "/portfolio/static/media/khoa_nightmarket1.992a4919adc0f8009cf1.jpg",
+    "static/media/old_couple1.jpg": "/portfolio/static/media/old_couple1.30a898985cf3467327e1.jpg",
+    "static/media/old_couple.jpg": "/portfolio/static/media/old_couple.5251df708781bcd60f4c.jpg",
     "static/media/resume.pdf": "/portfolio/static/media/resume.9899a166ddbb6d87f6cc.pdf",
-    "static/media/jiufen_900.jpg": "/portfolio/static/media/jiufen_900.513bc5fbf6140ecf749a.jpg",
-    "static/media/mom_and_son.jpg": "/portfolio/static/media/mom_and_son.eeea990f7d1a8a9ed29d.jpg",
-    "static/media/couple_pug.jpg": "/portfolio/static/media/couple_pug.9dab0a18665f79f2d8d0.jpg",
+    "static/media/jiufenLight.jpg": "/portfolio/static/media/jiufenLight.cb06ba04f0cfaa7ca703.jpg",
+    "static/media/motorcycle_alley.jpg": "/portfolio/static/media/motorcycle_alley.e736588168b0b4f04832.jpg",
+    "static/media/grill_nightmarket.jpg": "/portfolio/static/media/grill_nightmarket.cf7e9763d9c15b0084f0.jpg",
+    "static/media/nightMarket_alley.jpg": "/portfolio/static/media/nightMarket_alley.2d46787cbe2c45a0c105.jpg",
+    "static/media/jasper.jpg": "/portfolio/static/media/jasper.c6a7122922a36874f366.jpg",
     "static/media/cook.jpg": "/portfolio/static/media/cook.e5bb093fb8972206f26b.jpg",
+    "static/media/bowRiver.jpg": "/portfolio/static/media/bowRiver.ca471647a69eefb19516.jpg",
     "static/media/thumb_peak.png": "/portfolio/static/media/thumb_peak.8479b5914c274fcf1ba8.png",
     "static/media/lodge.jpg": "/portfolio/static/media/lodge.8e97ba86e2b0c9f88346.jpg",
-    "static/media/jiufenLight.jpg": "/portfolio/static/media/jiufenLight.8f8c0d6e525e8610d0d7.jpg",
-    "static/media/family.jpg": "/portfolio/static/media/family.48d7c7511d9a83f9e6f9.jpg",
+    "static/media/hiking.jpg": "/portfolio/static/media/hiking.e3e17b7505e6c9727efd.jpg",
     "static/media/thumb_fowler.png": "/portfolio/static/media/thumb_fowler.0534117f3f765589842b.png",
+    "static/media/banff.jpg": "/portfolio/static/media/banff.04e4fd1b7806858987e0.jpg",
     "static/media/thumb_sway.png": "/portfolio/static/media/thumb_sway.aa4fd028955e25be2936.png",
     "static/media/books.jpg": "/portfolio/static/media/books.c82fec51c707dce7dc3f.jpg",
     "static/media/banaueVillage.jpg": "/portfolio/static/media/banaueVillage.cc102ea47f42d468f435.jpg",
@@ -18,9 +31,9 @@
     "static/media/me.jpg": "/portfolio/static/media/me.ade0177da1f0c8ecfcab.jpg",
     "static/media/logo.svg": "/portfolio/static/media/logo.eccfaec327e0aff4e29665075c011771.svg",
     "index.html": "/portfolio/index.html",
-    "main.09021ef3.js.map": "/portfolio/static/js/main.09021ef3.js.map"
+    "main.7f29c106.js.map": "/portfolio/static/js/main.7f29c106.js.map"
   },
   "entrypoints": [
-    "static/js/main.09021ef3.js"
+    "static/js/main.7f29c106.js"
   ]
 }
