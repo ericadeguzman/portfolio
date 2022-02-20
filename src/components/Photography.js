@@ -28,7 +28,17 @@ import banff from "../assets/img/photography/banff/banff.jpg";
 import bowRiver from "../assets/img/photography/banff/bowRiver.jpg";
 import hiking from "../assets/img/photography/banff/hiking.jpg";
 import jasper from "../assets/img/photography/banff/jasper.jpg";
-
+import akihabara from "../assets/img/photography/japan/akihabara.jpg";
+import bicyclist from "../assets/img/photography/japan/bicyclist.jpg";
+import family from "../assets/img/photography/japan/family.jpg";
+import mountains from "../assets/img/photography/alaska/mountains.jpg";
+import buffalo_herd from "../assets/img/photography/alaska/buffalo_herd.jpg";
+import buffalo from "../assets/img/photography/alaska/buffalo.jpg";
+import reindeer from "../assets/img/photography/alaska/reindeer.jpg";
+import deer from "../assets/img/photography/alaska/deer.jpg";
+import moose from "../assets/img/photography/alaska/moose.jpg";
+import bear from "../assets/img/photography/alaska/bear.jpg";
+import canyon from "../assets/img/photography/utah/canyon.jpg";
 
 const useStyles = makeStyles((theme) => ({
   photographyHeader: {
@@ -91,6 +101,83 @@ export default function Photography() {
 
   return (
     <React.Fragment>
+              <Box className={classes.photographyHeader}>
+      <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4">Anchorage, Alaska 2021</Typography>
+          </Grid>
+          </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12}>
+          <img style={{width: '100%'}}  src={mountains} alt="mountains" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12}>
+          <img style={{width: '100%'}}  src={bear} alt="bear" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12}>
+          <img style={{width: '100%'}}  src={buffalo_herd} alt="buffalo herd" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={8}>
+          <img style={{width: '100%'}}  src={buffalo} alt="buffalo" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12}>
+          <img style={{width: '100%'}}  src={reindeer} alt="reindeer" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12}>
+          <img style={{width: '100%'}}  src={deer} alt="deer" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center" spacing={4}>
+          <Grid item xs={12} sm={12}>
+          <img style={{width: '100%'}}  src={moose} alt="moose" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+         Anchorage, Alaska 2021
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
             <Box className={classes.photographyHeader}>
       <Grid container direction="column" alignContent="flex-start">
           <Grid item>
@@ -100,7 +187,7 @@ export default function Photography() {
       </Box>
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center" spacing={4}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={8}>
           <img style={{width: '100%'}}  src={jiufen} alt="Jiufen" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
          Jiufen, Taiwan 2019
@@ -120,7 +207,7 @@ export default function Photography() {
       </Box>
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center" spacing={4}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={8}>
           <img style={{width: '100%'}}  src={yellowCoat} alt="Biker with a yellow rain coat" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
          Yellow Coat - Jiufen, Taiwan 2019
@@ -208,7 +295,7 @@ export default function Photography() {
       </Box>
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center" spacing={4}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={8}>
           <img style={{width: '100%'}}  src={nightMarket_alley} alt="night market alley" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
           Night Market, Taiwan 2019
@@ -226,7 +313,7 @@ export default function Photography() {
           </Grid>
         </Grid>
       </Box>
-      <Box className={classes.container2}>
+      {/* <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center" spacing={4}>
           <Grid item xs={12} sm={6}>
           <img style={{width: '100%'}}  src={motorcycle_alley} alt="Motorcyclist" />
@@ -235,13 +322,50 @@ export default function Photography() {
           </Typography>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
       <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center">       
           <Grid item  xs={12}>
           <img style={{width: '100%'}}  src={khoa} alt="khoa at the night market" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
           Night Market, Taiwan 2019
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.photographyHeader}>
+      <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4">Tokyo, Japan 2018</Typography>
+          </Grid>
+          </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={akihabara} alt="Akihabara" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Akihabara - Tokyo, Japan 2018
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12} sm={6}>
+          <img style={{width: '100%'}}  src={bicyclist} alt="bicyclist" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Tokyo, Japan 2018
+          </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <img style={{width: '100%'}}  src={family} alt="family" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Tokyo, Japan 2018
           </Typography>
           </Grid>
         </Grid>
@@ -318,7 +442,7 @@ export default function Photography() {
         <Box className={classes.container2}>
         <Grid container direction="column" alignContent="center">
           <Grid item  xs={12}>
-          <Box my={2}/>
+          <Box my={1}/>
           <img style={{width: '100%'}}  src={hiking} alt="Banff National Park, Canada" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
           Banff National Park, Canada
@@ -333,6 +457,24 @@ export default function Photography() {
           <img style={{width: '100%'}}  src={jasper} alt="Jasper Park, Canada" />
           <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
           Jasper National Park, Canada
+          </Typography>
+          </Grid>
+        </Grid>
+       </Box>
+       <Box className={classes.photographyHeader}>
+      <Grid container direction="column" alignContent="flex-start">
+          <Grid item>
+            <Typography variant="h4">Bryce Canyon National Park, Utah 2017</Typography>
+          </Grid>
+          </Grid>
+      </Box>
+      <Box className={classes.container2}>
+        <Grid container direction="column" alignContent="center">
+          <Grid item  xs={12}>
+          <Box my={1}/>
+          <img style={{width: '100%'}}  src={canyon} alt="Bryce Canyon National Park, Utah" />
+          <Typography style={{textAlign: 'right'}} className={classes.photoCaption}>
+          Bryce Canyon National Park, Utah 2017
           </Typography>
           </Grid>
         </Grid>
