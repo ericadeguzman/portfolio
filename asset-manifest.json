@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.de269fca.js",
+    "main.js": "/portfolio/static/js/main.911efdb3.js",
     "static/media/family.jpg": "/portfolio/static/media/family.dfb61fd2e9a1a044f7f1.jpg",
     "static/media/bicyclist.jpg": "/portfolio/static/media/bicyclist.1d2e510f42bee0afa24f.jpg",
     "static/media/reindeer.jpg": "/portfolio/static/media/reindeer.c324287618d9963468dc.jpg",
@@ -18,7 +18,6 @@
     "static/media/yellow_coat.jpg": "/portfolio/static/media/yellow_coat.8edf613193dc57733786.jpg",
     "static/media/old_couple1.jpg": "/portfolio/static/media/old_couple1.30a898985cf3467327e1.jpg",
     "static/media/old_couple.jpg": "/portfolio/static/media/old_couple.5251df708781bcd60f4c.jpg",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.9899a166ddbb6d87f6cc.pdf",
     "static/media/motorcycle_alley.jpg": "/portfolio/static/media/motorcycle_alley.e736588168b0b4f04832.jpg",
     "static/media/grill_nightmarket.jpg": "/portfolio/static/media/grill_nightmarket.cf7e9763d9c15b0084f0.jpg",
     "static/media/nightMarket_alley.jpg": "/portfolio/static/media/nightMarket_alley.2d46787cbe2c45a0c105.jpg",
@@ -26,6 +25,7 @@
     "static/media/jasper.jpg": "/portfolio/static/media/jasper.c6a7122922a36874f366.jpg",
     "static/media/mountains.jpg": "/portfolio/static/media/mountains.6d47e97f115a7a35093f.jpg",
     "static/media/moose.jpg": "/portfolio/static/media/moose.4b6fd59b41b96e13f511.jpg",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.be18796e63461f9aa237.pdf",
     "static/media/canyon.jpg": "/portfolio/static/media/canyon.cf1872c542fd49702617.jpg",
     "static/media/akihabara.jpg": "/portfolio/static/media/akihabara.70d428c8247784a3c671.jpg",
     "static/media/cook.jpg": "/portfolio/static/media/cook.e5bb093fb8972206f26b.jpg",
@@ -42,9 +42,9 @@
     "static/media/me.jpg": "/portfolio/static/media/me.ade0177da1f0c8ecfcab.jpg",
     "static/media/logo.svg": "/portfolio/static/media/logo.eccfaec327e0aff4e29665075c011771.svg",
     "index.html": "/portfolio/index.html",
-    "main.de269fca.js.map": "/portfolio/static/js/main.de269fca.js.map"
+    "main.911efdb3.js.map": "/portfolio/static/js/main.911efdb3.js.map"
   },
   "entrypoints": [
-    "static/js/main.de269fca.js"
+    "static/js/main.911efdb3.js"
   ]
 }
