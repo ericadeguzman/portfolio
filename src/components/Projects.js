@@ -44,7 +44,8 @@ export default function Projects() {
             <Typography variant="h4"> Projects</Typography>  
            </Grid>
            <Box my={1}/>
-          <Grid style={{marginTop: 20,}} container item direction="row" xs={12} justifyContent="center">
+           <Typography>I'm working on it... Need more coffee. Send help.</Typography>
+          {/* <Grid style={{marginTop: 20,}} container item direction="row" xs={12} justifyContent="center">
             <Grid item xs={12} sm={6} direction="column">
               <Grid item><img style={{width: '100%'}} src={thumb_fowler} alt="Fowler School of Engineering" /></Grid>
               <Grid item><img style={{width: '100%'}} src={thumb_sway} alt="Sway" /></Grid>
@@ -53,7 +54,7 @@ export default function Projects() {
             <img style={{width: '100%'}}  src={thumb_peak} alt="Peak Fitness" />
             <Box my={6}/>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
       
