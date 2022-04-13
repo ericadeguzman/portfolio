@@ -106,6 +106,15 @@ export default function LandingPage() {
               >
                 Photography
               </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.button}               
+                download
+                href={Resume}
+              >
+               Download Resume
+              </Button>
               </Box>
            
             </Box>
